@@ -1,24 +1,24 @@
 <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom headroom--top headroom--pinned">
     <div class="container">
         <a class="navbar-brand mr-lg-5" [routerLink]="['/home']">
-            <img src="./assets/img/brand/argon-white.png">
+            <img src="./assets/img/icon/logo.png">
         </a>
         <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="navbar-collapse collapse" id="navbar_global" [ngbCollapse]="isCollapsed">
             <div class="navbar-collapse-header">
                 <div class="row">
                     <div class="col-6 collapse-brand">
                         <a [routerLink]="['/home']">
-                            <img src="./assets/img/brand/blue.png">
+                            <img src="./assets/img/icon/logo.png">
                         </a>
                     </div>
                     <div class="col-6 collapse-close">
                         <button type="button" class="navbar-toggler" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
-              <span></span>
-              <span></span>
-            </button>
+                            <span></span>
+                            <span></span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                     <a [routerLink]="['/register']" class="dropdown-item">Register</a>
                 </li>
                 <li class="nav-item d-none d-lg-block ml-lg-4">
-                    <img src="./assets/img/brand/blue.png">
+                    <img src="./assets/img/screen/user.png">
                 </li>
             </ul>
         </div>
