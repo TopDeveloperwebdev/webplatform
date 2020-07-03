@@ -15,7 +15,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 
 import { HomeModule } from './home/home.module';
 import { LoginComponent } from './login/login.component';
-
+import { AgmCoreModule } from '@agm/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +32,10 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     RouterModule,
     AppRoutingModule,
-    HomeModule
+    HomeModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCjll58FtHCBljBY2x5-yXqSi6UdID1Gng'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

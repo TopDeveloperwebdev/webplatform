@@ -54,6 +54,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-lg-12 icons-section">
                     <div class="row row-grid">
                         <div class="col-lg-3 main-card">
@@ -102,10 +103,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-12 map_section">
-                    MAP
+
+                <div class="col-lg-12 map-section">
+                    <agm-map [latitude]="lat" [zoom]="zoom" [longitude]="lng" [styles]="darkstyle">
+                        <agm-marker [iconUrl]="icon1" [latitude]="lat" [longitude]="lng"></agm-marker>
+                        <agm-marker [iconUrl]="icon2" [latitude]="lat" [longitude]="lng"></agm-marker>
+                    </agm-map>
                 </div>
-                <div class="title">Tu próxima</div>
+                <div class="title">RTx</div>
 
                 <div class="col-lg-12 icons-section bottim-section">
                     <div class="row row-grid">
@@ -202,6 +207,15 @@
                         </div>
                         <div class=" mt-20"> <img class="main-img" src="./assets/img/screen/line.png"></div>
                     </div>
+                </div>
+                <div class="col-lg-12 two-card-section">
+                    <div class="search-section">
+                        <input />
+                        <input />
+                        <input />
+                        <a class="search-btn"></a>
+                    </div>
+                    <div class="search-result-section"></div>
                 </div>
                 <div class="col-lg-12 two-card-section">
                     <div class="row row-grid">

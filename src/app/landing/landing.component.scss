@@ -1,0 +1,27 @@
+agm-map {
+    width: 100% !important;
+    height: 605px !important;
+}
+
+.marker {
+    background-color: red;
+}
+
+.search-section {
+    background: #9B9B9B;
+    padding: 20px;
+    border-radius: 15px 15px 15px 0px;
+    display: flex;
+    justify-content: space-around;
+    input {
+        width: 30%;
+        height: 41px;
+    }
+    .search-btn {
+        background: url(../../assets/img/icon/search-btn.png);
+        width: 45px;
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
