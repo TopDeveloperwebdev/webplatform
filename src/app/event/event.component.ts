@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-landing',
-    templateUrl: './landing.component.html',
-    styleUrls: ['./landing.component.scss']
+  selector: 'app-event',
+  templateUrl: './event.component.html',
+  styleUrls: ['./event.component.scss']
 })
+export class EventComponent implements OnInit {
 
-export class LandingComponent implements OnInit {
   focus: any;
   focus1: any;
-    texto : string = 'Wenceslau Braz - Cuidado com as cargas';
+  texto: string = 'Wenceslau Braz - Cuidado com as cargas';
   lat: number = 23.8779431;
   lng: number = 49.8046873;
   zoom: number = 2.5;
-  public darkstyle =[
+  public darkstyle = [
     {
       "stylers": [
         {
@@ -40,7 +40,7 @@ export class LandingComponent implements OnInit {
         }
       ]
     },
-   
+
     {
       "featureType": "water",
       "elementType": "geometry",
@@ -50,14 +50,14 @@ export class LandingComponent implements OnInit {
         }
       ]
     },
-    
-   
+
+
   ]
 
-icon1 = { url: '../../assets/img/icon/marker1.gif', scaledSize: {height: 40, width: 40}};
-icon2 = { url: '../../assets/img/icon/marker1.gif', scaledSize: {height: 40, width: 40}};
+  icon1 = { url: '../../assets/img/icon/marker1.gif', scaledSize: { height: 40, width: 40 } };
+  icon2 = { url: '../../assets/img/icon/marker1.gif', scaledSize: { height: 40, width: 40 } };
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
 }

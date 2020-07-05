@@ -1,0 +1,123 @@
+agm-map {
+    width: 100% !important;
+    height: 605px !important;
+    background-repeat: no-repeat;
+    ;
+}
+
+.marker {
+    background-color: red;
+}
+
+.search-section {
+    background: #9B9B9B;
+    padding: 20px;
+    border-radius: 15px 15px 15px 0px;
+    display: flex;
+    justify-content: space-around;
+    input {
+        width: 30%;
+        height: 41px;
+    }
+    .search-btn {
+        background: url(../../assets/img/icon/search-btn.png);
+        width: 45px;
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
+
+.search-result-section {
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    .main-card {
+        width: 23%;
+        background-color: #444343;
+        box-shadow: 1px 2px 22px 4px #313030;
+        font-family: "Woodford Bourne";
+        font-weight: bold;
+        font-size: 14px;
+        color: #AEA19B;
+        padding: 5px;
+        margin: 10px;
+        position: relative;
+        height: 216px;
+        border-radius: 30px 30px 30px 0px;
+        img {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+    }
+}
+
+.small-title {
+    font-size: 20;
+    color: #AEA19B;
+}
+
+.detail-review {
+    display: flex;
+    justify-content: space-between;
+    .detail-img {
+        width: 48%;
+        .first-img {
+            display: flex;
+            justify-content: space-between;
+            img {
+                width: 250px;
+            }
+            .calendar-bar {
+                display: flex;
+            }
+        }
+        .second-img {
+            display: flex;
+            justify-content: space-between;
+            >img {
+                width: 80%;
+            }
+            .social-icons {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+    }
+    .detail-text {
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 81px;
+        .top-text {
+            display: flex;
+            justify-content: space-between;
+            >div {
+                display: flex;
+                width: 43%;
+                justify-content: space-evenly;
+            }
+        }
+        .bottom-text {
+            margin-top: 50px;
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    >div {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    img {
+        max-width: 70px;
+    }
+}

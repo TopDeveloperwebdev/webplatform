@@ -1,0 +1,98 @@
+agm-map {
+    width: 100% !important;
+    height: 605px !important;
+    background-repeat: no-repeat;
+    ;
+}
+
+.marker {
+    background-color: red;
+}
+
+.search-bar-section {
+    display: flex;
+    margin-top: 35px;
+    .search-bar {
+        width: 90%;
+        .search-section {
+            padding: 0px;
+            display: flex;
+            justify-content: space-around;
+            .location-key {
+                border-radius: 7px 7px 7px 0px;
+                width: 60%;
+                height: 38px;
+                background: #585757d9;
+                border: none;
+                box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.6);
+                margin: 10px 0px 25px 0px;
+            }
+            .date-key {
+                border-radius: 7px 7px 7px 0px;
+                width: 20%;
+                height: 38px;
+                background: #585757d9;
+                border: none;
+                box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.6);
+                margin: 10px 0px 25px 0px;
+            }
+            .search-btn {
+                background: url(../../assets/img/icon/search-btn.png);
+                width: 9%;
+                height: auto;
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+        }
+        img {
+            width: 100% !important;
+        }
+    }
+}
+
+.search-result-section {
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    .main-card {
+        width: 31%;
+        background-color: #444343;
+        font-family: "Woodford Bourne";
+        font-weight: bold;
+        font-size: 14px;
+        color: #AEA19B;
+        padding: 5px;
+        margin: 10px;
+        position: relative;
+        height: auto;
+        border-radius: 30px 30px 30px 0px;
+        display: flex;
+        justify-content: space-between;
+        .detail {
+            width: 50%;
+        }
+        p {
+            line-height: 1;
+        }
+        .location {
+            color: #FF776B;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .name {}
+        .date {}
+        .peoples {}
+    }
+}
+
+.icons-section {
+    display: flex;
+    justify-content: space-between;
+    width: 77%;
+    .vertical-line {
+        position: absolute;
+        height: 50%;
+        right: 35%;
+    }
+}

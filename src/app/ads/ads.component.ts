@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-landing',
-    templateUrl: './landing.component.html',
-    styleUrls: ['./landing.component.scss']
+  selector: 'app-ads',
+  templateUrl: './ads.component.html',
+  styleUrls: ['./ads.component.scss']
 })
-
-export class LandingComponent implements OnInit {
+export class AdsComponent implements OnInit {
   focus: any;
   focus1: any;
     texto : string = 'Wenceslau Braz - Cuidado com as cargas';
@@ -61,3 +60,5 @@ icon2 = { url: '../../assets/img/icon/marker1.gif', scaledSize: {height: 40, wid
   ngOnInit() {}
 
 }
+
+
