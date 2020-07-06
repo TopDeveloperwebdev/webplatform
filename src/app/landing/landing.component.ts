@@ -10,9 +10,9 @@ export class LandingComponent implements OnInit {
   focus: any;
   focus1: any;
     texto : string = 'Wenceslau Braz - Cuidado com as cargas';
-  lat: number = 23.8779431;
-  lng: number = 49.8046873;
-  zoom: number = 2.5;
+    lat: number = 30.8779431;
+    lng: number = 30.8046873;
+    zoom: number = 2;
   public darkstyle =[
     {
       "stylers": [
