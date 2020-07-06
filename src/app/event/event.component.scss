@@ -68,10 +68,52 @@ agm-map {
             display: flex;
             justify-content: space-between;
             img {
-                width: 250px;
+                width: 43%;
             }
             .calendar-bar {
                 display: flex;
+                justify-content: space-between;
+                width: 75%;
+                >div {
+                    font-family: 'Roboto-Thin';
+                    font-size: 14px;
+                    color: white;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    >div {
+                        font-size: 30px;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .title-detail {
+                .title {
+                    font-size: 30px;
+                    font-family: 'SourceSansPro-ExtraLight';
+                    color: #19E68C;
+                    font-weight: 100;
+                    text-align: center;
+                    span {
+                        font-family: 'SourceSansPro-Regular';
+                        font-size: 400;
+                        color: white;
+                    }
+                }
+                .name {
+                    font-family: 'WoodfordBournePRO-Regular';
+                    color: #AEA19B;
+                    font-family: 25px;
+                    text-align: center;
+                }
+                .date {
+                    color: #FF776B;
+                    font-family: 'SourceSansPro-SemiBold';
+                    font-size: 35px;
+                    font-weight: bold;
+                    text-align: center;
+                    line-height: 3;
+                }
             }
         }
         .second-img {
@@ -79,6 +121,8 @@ agm-map {
             justify-content: space-between;
             >img {
                 width: 80%;
+                margin: 10px;
+                border-radius: 30px 30px 30px 0px;
             }
             .social-icons {
                 display: flex;
@@ -101,6 +145,19 @@ agm-map {
                 display: flex;
                 width: 43%;
                 justify-content: space-evenly;
+                >div {
+                    font-family: 'Roboto-Thin';
+                    font-size: 20px;
+                    color: #AEA19B;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    >div {
+                        color: #FF776B;
+                        font-family: 'Roboto-Regular';
+                        font-size: 30px;
+                    }
+                }
             }
         }
         .bottom-text {
@@ -113,11 +170,69 @@ agm-map {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'Roboto';
+    color: #FF776B;
     >div {
         margin-top: auto;
         margin-bottom: auto;
     }
     img {
         max-width: 70px;
+    }
+}
+
+.info-search-section {
+    display: flex;
+    justify-content: space-around;
+    min-height: 300px;
+    .hotel-card {
+        background: url(../../assets/img/screen/hotel-card.png);
+        background-size: 100%;
+        font-size: 15px;
+        font-weight: lighter;
+        color: white;
+        background-repeat: no-repeat;
+        height: auto;
+        padding: 51px 87px 46px 98px;
+        >div {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+            line-height: 2;
+        }
+    }
+    .flight-card {
+        background: url(../../assets/img/screen/flight-card.png);
+        background-size: 100%;
+        font-size: 15px;
+        font-weight: lighter;
+        color: white;
+        background-repeat: no-repeat;
+        height: auto;
+        padding: 51px 87px 46px 98px;
+        >div {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+            line-height: 2;
+        }
+    }
+}
+
+.youtube-section {
+    .buttons {
+        color: white;
+        font-size: 42px;
+    }
+    .iframe-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+        iframe {
+            border-radius: 30px;
+        }
     }
 }

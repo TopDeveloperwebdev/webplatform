@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-event',
@@ -56,8 +57,12 @@ export class EventComponent implements OnInit {
 
   icon1 = { url: '../../assets/img/icon/marker1.gif', scaledSize: { height: 40, width: 40 } };
   icon2 = { url: '../../assets/img/icon/marker1.gif', scaledSize: { height: 40, width: 40 } };
-  constructor() { }
-
-  ngOnInit() { }
+  displayURL;
+  constructor(private sanitizer: DomSanitizer) {
+    this.displayURL = sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/tgbNymZ7vqY');
+  }
+  ngOnInit() { 
+   
+  }
 
 }

@@ -53,3 +53,21 @@ agm-map {
         }
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .section {
+        padding-bottom: 0px;
+    }
+    .search-result-section {
+        .main-card {
+            width: 25%;
+            height: 100px;
+            img {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                width: 30%;
+            }
+        }
+    }
+}
