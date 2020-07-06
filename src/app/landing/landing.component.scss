@@ -33,9 +33,15 @@ agm-map {
     display: flex;
     flex-wrap: wrap;
     margin: 50px auto;
+    .red {
+        background: #FF776B !important;
+    }
+    .green {
+        background: #19E68C !important;
+    }
     .main-card {
         width: 23%;
-        background-color: #444343;
+        background-color: #585757;
         box-shadow: 1px 2px 22px 4px #313030;
         font-family: "Woodford Bourne";
         font-weight: bold;
