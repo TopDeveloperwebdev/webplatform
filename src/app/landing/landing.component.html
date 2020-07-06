@@ -106,7 +106,7 @@
                 </div>
 
                 <div class="col-lg-12 map-section">
-                    <agm-map [latitude]="lat" [zoom]="zoom" [disableDefaultUI]="true" [longitude]="lng" [styles]="darkstyle">
+                    <agm-map [latitude]="lat" [zoom]="zoom" [disableDefaultUI]="true" [scrollwheel]="false" [longitude]="lng" [styles]="darkstyle">
                         <agm-marker [iconUrl]="icon1" [latitude]="lat" [longitude]="lng"></agm-marker>
                         <agm-marker [iconUrl]="icon2" [latitude]="lat" [longitude]="lng"></agm-marker>
                     </agm-map>
