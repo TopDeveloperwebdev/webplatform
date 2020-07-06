@@ -162,6 +162,9 @@ agm-map {
         }
         .bottom-text {
             margin-top: 50px;
+            color: #AEA19B;
+            font-family: 'Roboto-Regular';
+            font-size: 20px;
         }
     }
 }
@@ -172,7 +175,7 @@ agm-map {
     padding: 20px;
     font-size: 20px;
     font-weight: 100;
-    font-family: 'Roboto';
+    font-family: 'Roboto-Regular';
     color: #FF776B;
     >div {
         margin-top: auto;
@@ -195,6 +198,7 @@ agm-map {
         color: white;
         background-repeat: no-repeat;
         height: auto;
+        min-height: 220px;
         padding: 51px 87px 46px 98px;
         >div {
             display: flex;
@@ -211,6 +215,7 @@ agm-map {
         color: white;
         background-repeat: no-repeat;
         height: auto;
+        min-height: 220px;
         padding: 51px 87px 46px 98px;
         >div {
             display: flex;
@@ -233,6 +238,161 @@ agm-map {
         padding: 50px;
         iframe {
             border-radius: 30px;
+        }
+    }
+}
+
+.card-section {
+    background: none;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 100% 100%;
+    height: 100%;
+    min-height: 219px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    >div {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+        .custom-card {
+            padding-left: 8px;
+            margin: 0px;
+            width: 80%;
+            border-radius: 0px 0px 0px 30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .line {
+        width: 100%;
+    }
+    .section {
+        padding-bottom: 0px;
+    }
+    .detail-review {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .detail-img {
+            width: 100%;
+            .first-img {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap-reverse;
+                img {
+                    width: 100%;
+                }
+                .calendar-bar {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+            }
+            .second-img {
+                display: flex;
+                justify-content: space-between;
+                >img {
+                    width: 70%;
+                }
+            }
+        }
+        .detail-text {
+            width: 100%;
+            .top-text {
+                display: flex;
+                justify-content: space-between;
+                >div {
+                    display: flex;
+                    width: 43%;
+                    img {
+                        height: 40%;
+                    }
+                }
+            }
+            .bottom-text {
+                padding: 15px;
+            }
+        }
+    }
+    .info-search-section {
+        flex-wrap: wrap;
+    }
+    .buttons {
+        padding: 0px;
+        font-size: 12px;
+        >div {
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 16%;
+        }
+        img {
+            max-width: 55%
+        }
+    }
+    .youtube-section {
+        .buttons {
+            color: white;
+            font-size: 15px;
+        }
+        .iframe-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            iframe {
+                border-radius: 30px;
+                height: 350px;
+            }
+        }
+    }
+    .info-search-section {
+        display: flex;
+        justify-content: space-around;
+        min-height: 300px;
+        .hotel-card {
+            font-size: 13px;
+            padding: 51px 70px 46px 71px;
+            >div {
+                line-height: 1.2;
+            }
+        }
+        .flight-card {
+            font-size: 13px;
+            padding: 51px 70px 46px 71px;
+            >div {
+                line-height: 1.5;
+            }
+        }
+    }
+    .card-section {
+        background: url(../../assets/img/screen/card-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        max-height: 225px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        >div {
+            display: flex;
+            justify-content: space-around;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            .custom-card {
+                img {
+                    width: 20%;
+                }
+                box-shadow: none;
+                background: none;
+            }
+            .main-img {
+                width: 100%;
+                height: 88%;
+                margin: -20px 0px 0px -7px;
+            }
         }
     }
 }
