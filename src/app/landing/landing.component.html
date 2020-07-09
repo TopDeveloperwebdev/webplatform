@@ -24,11 +24,12 @@
                 <div class="title">Tu próxima</div>
                 <div class="col-lg-12">
                     <div class="row row-grid">
-                        <div class="col-lg-3 main-card">
+
+                        <div class="col-lg-3 main-card" *ngFor="let ad of ads">
                             <div> <img class="main-img" src="./assets/img/screen/top-image-1.png"></div>
                             <div class="custom-card ">
                                 <div>Medio maratón de Merlbourn</div>
-                                <div class="country-title">GERMANY</div>
+                                <div class="country-title">{{ad.payload | json}}</div>
                             </div>
                         </div>
 

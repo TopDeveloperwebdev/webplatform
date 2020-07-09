@@ -15,21 +15,14 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 
 import { HomeModule } from './home/home.module';
+
 import { LoginComponent } from './login/login.component';
 import { AgmCoreModule } from '@agm/core';
 import { EventComponent } from './event/event.component';
-import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
 
-var firebaseConfig = {
-  apiKey: "AIzaSyCZx6hTBKw-xTlhIpmY4MbfplMYDGkFSDA",
-  authDomain: "runtrip-ar.firebaseapp.com",
-  databaseURL: "https://runtrip-ar.firebaseio.com",
-  projectId: "runtrip-ar",
-  storageBucket: "runtrip-ar.appspot.com",
-  messagingSenderId: "654028737360",
-  appId: "1:654028737360:web:acee98dca94c09a8553a55",
-  measurementId: "G-YD5S2HS061"
-};
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 @NgModule({
   declarations: [
@@ -49,8 +42,9 @@ var firebaseConfig = {
     FormsModule,
     RouterModule,
     AppRoutingModule,
-    HomeModule,  
-    AngularFireModule.initializeApp(firebaseConfig),  
+    HomeModule,     
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCjll58FtHCBljBY2x5-yXqSi6UdID1Gng'
     })

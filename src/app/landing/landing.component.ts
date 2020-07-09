@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {CrudService} from '../services/crud.service'
 @Component({
     selector: 'app-landing',
     templateUrl: './landing.component.html',
@@ -56,8 +56,14 @@ export class LandingComponent implements OnInit {
 
 icon1 = { url: '../../assets/img/icon/marker1.gif', scaledSize: {height: 40, width: 40}};
 icon2 = { url: '../../assets/img/icon/marker1.gif', scaledSize: {height: 40, width: 40}};
-  constructor() { }
+ads : any;
+  constructor( private CrudService: CrudService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.CrudService.getProducts().subscribe(res=> {
 
+      this.ads = res;
+      console.log(JSON.stringify(this.ads.payload) )
+    }); 
+  }
 }
