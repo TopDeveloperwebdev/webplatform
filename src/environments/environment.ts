@@ -13,7 +13,8 @@ export const environment = {
     messagingSenderId: "654028737360",
     appId: "1:654028737360:web:acee98dca94c09a8553a55",
     measurementId: "G-YD5S2HS061"
-  }
+  },
+  AUTH_SERVER_ADDRESS : 'https://tripadvisor1.p.rapidapi.com'
 };
 
 /*

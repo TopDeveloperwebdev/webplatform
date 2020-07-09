@@ -23,7 +23,7 @@ import { environment } from '../environments/environment';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,8 +45,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     HomeModule,     
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
+    HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCjll58FtHCBljBY2x5-yXqSi6UdID1Gng'
+      apiKey: 'AIzaSyBrEOZMUhqttzY_fHjF1a8XTckHUaJlZio'
     })
   ],
   
