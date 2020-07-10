@@ -15,7 +15,8 @@ agm-map {
     border-radius: 15px 15px 15px 0px;
     display: flex;
     justify-content: space-around;
-    input {
+    input,
+    select {
         width: 30%;
         height: 41px;
     }
@@ -40,7 +41,6 @@ agm-map {
         background: #19E68C !important;
     }
     .main-card {
-        width: 23%;
         background-color: #585757;
         box-shadow: 1px 2px 22px 4px #313030;
         font-family: "Woodford Bourne";
@@ -57,6 +57,12 @@ agm-map {
             right: 20px;
             top: 20px;
         }
+    }
+    p {
+        font-family: 'Roboto-Medium';
+        font-weight: 400;
+        font-size: 22px;
+        color: #AEA19B;
     }
 }
 

@@ -45,6 +45,11 @@
     src: url('../fonts/Roboto-Regular.ttf');
 }
 
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('../fonts/Roboto-Medium.ttf');
+}
+
 .fa {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;

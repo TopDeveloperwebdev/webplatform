@@ -1,19 +1,30 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { environment } from '../../environments/environment';
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class CrudService {
+
+  public books= [];
+  public users: any;
   constructor(private db: AngularFireDatabase, private httpClient: HttpClient) { }
 
   postProduct(formValue) {
-    this.db.list('/Publicidad/Eventos').push(formValue);
+   
+    this.db.list('/Publicidad/Eventos', ref => ref.orderByChild('key').equalTo('-LF2eRf1lHI6X3U6C7Yh'))
   }
-
-  getProducts() {
+  getEvents(filterData) {
+    return this.db.list('/Eventos', ref => ref.orderByChild('a_lugar').equalTo(filterData.location))
+    .valueChanges();  
+  }
+   
+ 
+ getProducts() {
     return this.db.list('/Publicidad/Eventos').valueChanges();
 
   }

@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="col-lg-12 map-section">
-                    <agm-map [latitude]="lat" [zoom]="zoom" [disableDefaultUI]="true" [scrollwheel]="false" [longitude]="lng" [styles]="darkstyle">
+                    <agm-map [zoom]="zoom" [disableDefaultUI]="true" [scrollwheel]="false" [styles]="darkstyle">
                         <agm-marker [iconUrl]="Ads_point.marker" [latitude]="Ads_point.lat" [longitude]="Ads_point.lng" *ngFor="let Ads_point of Ads_points"></agm-marker>
                         <agm-marker [iconUrl]="Black_point.marker" [latitude]="Black_point.lat" [longitude]="Black_point.lng" *ngFor="let Black_point of Black_points"></agm-marker>
                     </agm-map>
@@ -190,36 +190,23 @@
                 </div>
                 <div class="col-lg-12 two-card-section">
                     <div class="search-section">
-                        <input placeholder="NOMBRE / LOCACION" />
-                        <input placeholder="FECHA" />
-                        <input placeholder="TIPO" />
-                        <a class="search-btn"></a>
+                        <input placeholder="NOMBRE / LOCACION" [(ngModel)]='filter_data.location' />
+                        <input placeholder="FECHA" [(ngModel)]='filter_data.date' type="date" />
+                        <select [(ngModel)]='event_type'>                          
+                            <option *ngFor="let type of types">{{type}}</option>
+                        </select>
+
+                        <a class="search-btn" (click)='filter(event_type)'></a>
                     </div>
                     <div class="search-result-section col-lg-12">
-                        <div class="main-card red" [routerLink]="['/filter']">
-                            <img src="./assets/img/icon/ads-1.png" />
+                        <div class="col-lg-3" *ngFor="let type of types ; let indexOfelement=index;">
+                            <div class="main-card" [class]="indexOfelement == 0 ? 'red' : '' || indexOfelement == 6 ? 'green' : '' " (click)='filter(type)'>
+                                <img src="./assets/img/icon/ads-{{indexOfelement + 1}}.png" />
+                            </div>
+                            <p>{{type}}</p>
                         </div>
-                        <div class="main-card" [routerLink]="['/filter']">
-                            <img src="./assets/img/icon/ads-2.png" />
-                        </div>
-                        <div class="main-card" [routerLink]="['/filter']">
-                            <img src="./assets/img/icon/ads-3.png" />
-                        </div>
-                        <div class="main-card" [routerLink]="['/filter']">
-                            <img src="./assets/img/icon/ads-4.png" />
-                        </div>
-                        <div class="main-card" [routerLink]="['/filter']">
-                            <img src="./assets/img/icon/ads-5.png" />
-                        </div>
-                        <div class="main-card" [routerLink]="['/filter']">
-                            <img src="./assets/img/icon/ads-6.png" />
-                        </div>
-                        <div class="main-card green" [routerLink]="['/filter']">
-                            <img src="./assets/img/icon/ads-7.png" />
-                        </div>
-                        <div class="main-card" [routerLink]="['/filter']">
-                            <img src="./assets/img/icon/ads-8.png" />
-                        </div>
+
+
                     </div>
                 </div>
                 <div class="col-lg-12 two-card-section">
