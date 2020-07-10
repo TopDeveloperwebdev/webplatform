@@ -191,7 +191,7 @@
                 <div class="col-lg-12 two-card-section">
                     <div class="search-section">
                         <input placeholder="NOMBRE / LOCACION" [(ngModel)]='filter_data.location' />
-                        <input placeholder="FECHA" [(ngModel)]='filter_data.date' type="date" />
+                        <input placeholder="FECHA" date="dd/mm/yyyy" [(ngModel)]='filter_data.date' type="date" />
                         <select [(ngModel)]='event_type'>                          
                             <option *ngFor="let type of types">{{type}}</option>
                         </select>
@@ -205,8 +205,6 @@
                             </div>
                             <p>{{type}}</p>
                         </div>
-
-
                     </div>
                 </div>
                 <div class="col-lg-12 two-card-section">

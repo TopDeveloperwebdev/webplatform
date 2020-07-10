@@ -77,7 +77,7 @@
                             <img src="./assets/img/icon/map.png" />
                         </div>
                         <div class="search-result-section col-lg-12">
-                            <div class="main-card" [routerLink]="['/event']" *ngFor="let event of eventDatas">
+                            <div class="main-card" *ngFor="let event of eventDatas ; let indexOfelement=index;" (click)='moveDetailPage(indexOfelement)'>
                                 <img src="{{event.imgp}}" />
                                 <div class="detail">
                                     <p class="location">{{event.nombre}}</p>

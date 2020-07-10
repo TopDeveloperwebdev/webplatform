@@ -18,9 +18,9 @@ export class CrudService {
    
     this.db.list('/Publicidad/Eventos', ref => ref.orderByChild('key').equalTo('-LF2eRf1lHI6X3U6C7Yh'))
   }
-  getEvents(filterData) {
-    return this.db.list('/Eventos', ref => ref.orderByChild('a_lugar').equalTo(filterData.location))
-    .valueChanges();  
+  getEvents() {
+    return this.db.list('/Eventos').valueChanges();  
+  
   }
    
  
@@ -33,7 +33,7 @@ export class CrudService {
 
     const headers = new HttpHeaders()
       .set('x-rapidapi-host', 'tripadvisor1.p.rapidapi.com')
-      .set('x-rapidapi-key', '0ff4de13e9mshbafda0022c0c6cfp18355ajsn2554e0eb87f4')
+      .set('x-rapidapi-key', '2b6b3c87bemshb947ceeb3e12065p122c54jsna08aa76c11f8')
       .set('useQueryString', 'true');
     return this.httpClient.get(`${environment.AUTH_SERVER_ADDRESS}/locations/search?location_id=1&limit=1&sort=relevance&offset=0&lang=spa&currency=USD&units=km&query=${city} + ${desc}`, { headers: headers, });
   }

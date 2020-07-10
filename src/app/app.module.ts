@@ -24,6 +24,9 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { HttpClientModule } from '@angular/common/http';
+
+import { LocationStrategy, HashLocationStrategy, PathLocationStrategy } from "@angular/common";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +45,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     RouterModule,
     AppRoutingModule,
-    HomeModule,     
+    HomeModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     HttpClientModule,
@@ -50,8 +53,10 @@ import { HttpClientModule } from '@angular/common/http';
       apiKey: 'AIzaSyBrEOZMUhqttzY_fHjF1a8XTckHUaJlZio'
     })
   ],
-  
-  providers: [LandingComponent],
+
+  providers: [LandingComponent, FilterComponent, 
+    { provide: LocationStrategy, useClass: PathLocationStrategy }    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

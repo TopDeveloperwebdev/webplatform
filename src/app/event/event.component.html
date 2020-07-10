@@ -26,11 +26,11 @@
                         <div class="detail-img">
                             <div class="first-img">
 
-                                <img src="./assets/img/screen/cover-img.png" />
+                                <img src="{{selectedEvent.imgp}}" />
                                 <div class="title-detail">
-                                    <div class="title">Buenos Aires<span>ARGENTNA</span></div>
+                                    <div class="title">{{selectedEvent.nombre}}<span>{{selectedEvent.pais}}</span></div>
                                     <div class="name">Maratón Internacional de Buenos Aires Buenos AiresARGENTNA</div>
-                                    <div class="date">SEP - 23</div>
+                                    <div class="date">{{selectedEvent.fecha}}</div>
                                     <div class="calendar-bar">
                                         <div>DAYS
                                             <div>46</div>
@@ -48,7 +48,16 @@
                                 </div>
                             </div>
                             <div class="second-img">
-                                <img src="./assets/img/screen/cover-second.png" />
+
+                                <div class="img">
+                                    <ngb-carousel>
+                                        <ng-template ngbSlide *ngFor="let carousel of carousels">
+                                            <div class="picsum-img-wrapper">
+                                                <img src="{{carousel}}" alt="Angular Carousel 1">
+                                            </div>
+                                        </ng-template>
+                                    </ngb-carousel>
+                                </div>
                                 <div class="social-icons">
                                     <a> <img src="./assets/img/icon/facebook.png" /></a>
                                     <a> <img src="./assets/img/icon/twitter.png" /></a>
@@ -70,9 +79,7 @@
                                     <div>EZE</div>
                                 </div>
                             </div>
-                            <div class="bottom-text">Unite a la comunidad de runners al rededor del mundo, en busca de nuevas experiencias, vemos en el correr la mejor excusa para viajar y conocer el mundo, contanos la tuya o ofrécenos una para seguir ampliando nuestra comunidad.
-                                Este texto describe this event, and the RTX, aroun them, also de Runtripers. Welcomo to the most famous and challenge race of South America continent continent. Buenos Aires is one of the most beautiful citys, and the capital
-                                oj dadawewwq, laksakslkqw .</div>
+                            <div class="bottom-text">{{selectedEvent.desc}}</div>
                         </div>
                     </div>
                 </div>
