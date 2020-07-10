@@ -74,20 +74,20 @@ export class LandingComponent implements OnInit {
   constructor(private CrudService: CrudService) { }
 
   ngOnInit() {
-    this.CrudService.getProducts().subscribe(res => {
-      this.ads$ = res;
-      this.ads$.forEach(ad => {
-        this.CrudService.getLocation(ad.ciudad, ad.desc).subscribe(res => {
-          const markerObject = { lat: res.data[0].result_object.latitude, lng: res.data[0].result_object.longitude, marker:  { url: '../../assets/img/icon/marker1.gif', scaledSize: { height: 40, width: 40 } } };
-          this.Ads_points.push(markerObject);
-        });
-      });
-    });
-    this.black_points_string.forEach(black_point => {
-      this.CrudService.getLocation(black_point , '').subscribe(res => {
-        const markerObject = { lat: res.data[0].result_object.latitude, lng: res.data[0].result_object.longitude, marker:  { url: '../../assets/img/icon/marker2.gif', scaledSize: { height: 40, width: 40 } } };
-        this.Black_points.push(markerObject);
-      });
-    });
+    // this.CrudService.getProducts().subscribe(res => {
+    //   this.ads$ = res;
+    //   this.ads$.forEach(ad => {
+    //     this.CrudService.getLocation(ad.ciudad, ad.desc).subscribe(res => {
+    //       const markerObject = { lat: res.data[0].result_object.latitude, lng: res.data[0].result_object.longitude, marker:  { url: '../../assets/img/icon/marker1.gif', scaledSize: { height: 40, width: 40 } } };
+    //       this.Ads_points.push(markerObject);
+    //     });
+    //   });
+    // });
+    // this.black_points_string.forEach(black_point => {
+    //   this.CrudService.getLocation(black_point , '').subscribe(res => {
+    //     const markerObject = { lat: res.data[0].result_object.latitude, lng: res.data[0].result_object.longitude, marker:  { url: '../../assets/img/icon/marker2.gif', scaledSize: { height: 40, width: 40 } } };
+    //     this.Black_points.push(markerObject);
+    //   });
+    // });
   }
 }

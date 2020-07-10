@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-ads',
-  templateUrl: './ads.component.html',
-  styleUrls: ['./ads.component.scss']
+  templateUrl: './filter.component.html',
+  styleUrls: ['./filter.component.scss']
 })
-export class AdsComponent implements OnInit {
+export class FilterComponent implements OnInit {
   focus: any;
   focus1: any;
     texto : string = 'Wenceslau Braz - Cuidado com as cargas';
